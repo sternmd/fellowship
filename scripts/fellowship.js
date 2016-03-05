@@ -89,7 +89,28 @@ var beautifulStranger = function () {
 beautifulStranger();
 
 //Part 6
-=
 var leaveTheShire = function () {
    // assemble the `hobbits` and move them to `rivendell`
+   var assemble = $('#hobbit').detach();
+   $("article:nth-child(2)").append(assemble);
+
+
+
+leaveTheShire();
+
+//PART 7
+var forgeTheFellowShip = function () {
+   var fellowship = $('div class="the-fellowship"');
+   $("article:nth-child(2)").append(fellowship);
+
+   var assemble = $('#hobbit').detach();
+   $(".the-fellowship").append(fellowship);
+
+   var buddies = $('#aside').detach();
+   $("the-fellowship").append(buddies;
+
 };
+   // create a new div called `'the-fellowship'` within `rivendell`
+   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+   // after each character is added make an alert that they // have joined your party
+forgeTheFellowShip();
