@@ -110,7 +110,79 @@ var forgeTheFellowShip = function () {
    $("the-fellowship").append(buddies;
 
 };
-   // create a new div called `'the-fellowship'` within `rivendell`
-   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-   // after each character is added make an alert that they // have joined your party
 forgeTheFellowShip();
+
+//Part 8
+var gandalf = fellowship.eq(0);
+
+var theBalrog = function () {
+   // change the `'Gandalf'` text to `'Gandalf the White'`
+   gandalf.text('Gandalf the White');
+   // apply the following style to the element, make the // background 'white', add a grey border
+   gandalf.css('border','5px solid slategray');
+   gandalf.css('background-color','white');
+};
+theBalrog();
+
+//PART 9
+var boromir = fellowship.eq(4);
+
+var hornOfGondor = function () {
+   // pop up an alert that the horn of gondor has been blown
+   alert('the horn of gondor has been blown!');
+   // Boromir's been killed by the Uruk-hai!
+   alert("Boromir's been killed by the Uruk-hai!");
+   // Remove `Boromir` from the Fellowship
+   boromir.css('text-decoration','line-through');
+   rivendell.append(boromir);
+
+};
+hornOfGondor();
+
+//Part 10
+
+var frodo = $('li').eq(0);
+var sam   = $('li').eq(5);
+
+var itsDangerousToGoAlone = function (){
+   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+   mordor.append(frodo);
+   mordor.append(sam);
+   // add a div with an id of `'mount-doom'` to `Mordor`
+   var mountDoom = $('<div>');
+   mountDoom.prop('id','mount-doom');
+   mordor.append(mountDoom);
+};
+itsDangerousToGoAlone();
+
+var gollum
+var theRing
+//PART 11
+var weWantsIt = function () {
+  // Create a div with an id of `'gollum'` and add it to Mordor
+  gollum = $('<div>');
+  gollum.prop('id','gollum');
+  mordor.append(gollum);
+  // Remove `the ring` from `Frodo` and give it to `Gollum`
+  theRing = frodo.find('#the-ring').eq(0);
+  gollum.append(theRing);
+  // Move Gollum into Mount Doom
+  var mountDoom = mordor.find('mount-doom').eq(0);
+  mountDoom.append(gollum);
+};
+weWantsIt();
+
+//Part 12
+var thereAndBackAgain = function () {
+  // Create a div with an id of `'gollum'` and add it to Mordor
+  gollum.remove();
+  // Remove `the ring` from `Frodo` and give it to `Gollum`
+  // Move Gollum into Mount Doom
+  var hobbitsList = $('<ul>');
+  var hobbits = $('.hobbit');
+  for (var i = 0; i < hobbits.length; i++) {
+    hobbitsList.append(hobbits.eq(i));
+  }
+  theShire.append(hobbitsList);
+};
+thereAndBackAgain();
